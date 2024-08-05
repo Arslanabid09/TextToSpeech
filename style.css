@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(35deg, #0f2027, #2c5364);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container {
+    text-align: center;
+    padding: 1rem;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+}
+.container h1 {
+   color: wheat;
+   padding-bottom: 2rem;
+   font-family: monospace;
+}
+.container h1 span {
+    color: red;
+}
+.container textArea {
+    width: 100%;
+    max-width: 30rem;
+    height: 15rem;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    outline: none;
+    font-size: 1rem;
+    font-family: monospace;
+    background-color: transparent;
+    color: #fff;
+    resize: none; /* Prevents resizing on small screens */
+}
+.container .generateBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    gap: 1rem;
+}
+.container .generateBox button {
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    border: none;
+    background-color: rgb(4, 68, 4);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: cursive; 
+    width: 100%;
+    max-width: 8rem;
+}
+.container .generateBox button:hover {
+    background-color: rgb(3, 44, 3);
+}
+.container .generateBox select {
+    color: white;
+    font-family: cursive;
+    background-color: #2c5364;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 12rem;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+    .container .generateBox {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .container .generateBox button, .container .generateBox select {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0.5rem;
+    }
+    .container textArea {
+        padding: 0.5rem;
+    }
+    .container .generateBox button, .container .generateBox select {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+}
